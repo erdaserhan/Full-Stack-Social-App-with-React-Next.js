@@ -18,6 +18,8 @@ import Link from "next/link";
 
 function MobileNavbar() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+  /*A boolean that indicates whether a user is currently signed in. Comes from clerk*/
   const { isSignedIn } = useAuth();
   const { theme, setTheme } = useTheme();
 

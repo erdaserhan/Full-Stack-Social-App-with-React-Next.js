@@ -6,6 +6,8 @@ import ModeToggle from "./ModeToggle";
 import { currentUser } from "@clerk/nextjs/server";
 
 async function DesktopNavbar() {
+    /*The currentUser helper returns the Backend User object of the currently active user. 
+    It can be used in Server Components, Route Handlers, and Server Actions.*/
   const user = await currentUser();
 
   return (
