@@ -5,23 +5,7 @@ import { SignedIn, SignedOut, SignInButton, SignOutButton, SignUpButton, UserBut
 export default function Home() {
   return (
     <div>
-      <SignedOut>
-        <SignInButton>
-          <Button>
-            Sign In
-          </Button>
-        </SignInButton>
-      </SignedOut>
-      <SignedIn>
-        <UserButton />
-        <SignOutButton>
-          <Button>
-           SignOut 
-          </Button>  
-        </SignOutButton> 
-      </SignedIn>
-
-      <ModeToggle />
+      <h1>Homepage</h1>
     </div>
   );
 }
