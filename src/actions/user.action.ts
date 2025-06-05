@@ -75,7 +75,7 @@ export async function getRandomUsers() {
           {NOT: {
             followers: {
               some: {
-                followerId: userId // followers that follow us
+                followerId: userId // followers that follow us. My follower's followerId !== my userId. Which is the other followers except me.
               }
             }
           }}
@@ -149,7 +149,7 @@ export async function toggleFollow(targetUserId: string) {
       ]);
     }
 
-    revalidatePath("/");
+    revalidatePath("/"); // top update cache for UI. Not see the follow card after clicking follow.
     return { success: true };
   } catch (error) {
     console.log("Error in toggleFollow", error);
